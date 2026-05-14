@@ -23,8 +23,8 @@ const uiStore = useUiStore();
 <template>
   <aside class="dsker_sidebar-shell" :data-state="uiStore.sidebarOpen ? 'open' : 'closed'">
     <div class="dsker_sidebar-panel" :data-state="uiStore.sidebarOpen ? 'open' : 'closed'">
-      <div class="dsker_sidebar-header" data-tauri-drag-region>
-        <div class="dsker_sidebar-brand">
+      <div class="dsker_sidebar-header">
+        <div class="dsker_sidebar-brand" data-tauri-drag-region>
           <div class="dsker_app-icon" aria-hidden="true">
             <span class="dsker_app-icon__primary">D</span><span class="dsker_app-icon__accent">S</span>
           </div>

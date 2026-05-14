@@ -7,10 +7,10 @@ import AppShell from "./components/layout/AppShell.vue";
   <ConfigProvider
     :theme="{
       token: {
-        borderRadius: 0,
-        borderRadiusXS: 0,
-        borderRadiusSM: 0,
-        borderRadiusLG: 0,
+        borderRadius: 9999,
+        borderRadiusXS: 9999,
+        borderRadiusSM: 9999,
+        borderRadiusLG: 9999,
       },
     }"
   >

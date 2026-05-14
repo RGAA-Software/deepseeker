@@ -2,31 +2,39 @@
   box-sizing: border-box;
 }
 
-/* Force all Ant Design components to use sharp corners */
+/* Buttons, inputs, selects, switches: fully rounded */
 .ant-btn:not(.ant-btn-circle):not(.ant-btn-circle-outline),
 .ant-input,
 .ant-input-affix-wrapper,
 .ant-select-selector,
-.ant-card,
-.ant-card-bordered,
-.ant-modal-content,
-.ant-modal-header,
-.ant-table-container,
-.ant-tag,
-.ant-menu-item,
+.ant-switch,
 .ant-checkbox-inner,
 .ant-radio-inner,
-.ant-switch,
-.ant-slider-track,
-.ant-slider-step,
-.ant-form-item,
 .ant-input-number,
 .ant-input-number-group-addon,
 .ant-picker,
 .ant-dropdown-menu,
 .ant-popconfirm,
-.ant-notification-notice {
-  border-radius: 0 !important;
+.ant-notification-notice,
+.ant-slider-track,
+.ant-slider-step,
+.ant-menu-item,
+.ant-tag {
+  border-radius: 9999px !important;
+}
+
+/* Cards, messages, modals, tables, dropdowns: 12px */
+.ant-card,
+.ant-card-bordered,
+.ant-modal-content,
+.ant-modal-header,
+.ant-table-container,
+.ant-select-dropdown {
+  border-radius: 12px !important;
+}
+
+.ant-select-item-option {
+  border-radius: 12px !important;
 }
 
 html,
@@ -353,6 +361,7 @@ a {
   min-height: 42px;
   padding: 0 12px;
   border: 0;
+  border-radius: 9999px;
   color: var(--color-text-secondary);
   background: transparent;
   cursor: pointer;
@@ -419,10 +428,10 @@ a {
   height: 36px;
   display: flex;
   align-items: center;
-  border-radius: 0;
+  border-radius: 9999px;
   border: 1px solid var(--color-sidebar-search-border);
   background: var(--color-sidebar-search-bg);
-  padding: 0 8px;
+  padding: 0 8px 0 10px;
 }
 
 .dsker_sidebar-divider {
@@ -503,6 +512,7 @@ a {
   margin-bottom: 6px;
   padding: 10px 12px;
   border: 1px solid transparent;
+  border-radius: 9999px;
   text-align: left;
   background: transparent;
   color: var(--color-text-secondary);
@@ -851,7 +861,7 @@ a {
   flex-direction: column;
   gap: 12px;
   padding: 16px;
-  border-radius: 0;
+  border-radius: 12px;
   border: 1px solid var(--color-border);
   background: rgba(255, 255, 255, 0.84);
   backdrop-filter: blur(20px);
@@ -1047,7 +1057,7 @@ a {
 .dsker_content-page__panel {
   padding: 18px;
   border: 1px solid var(--color-border);
-  border-radius: 0;
+  border-radius: 12px;
   background: rgba(255, 255, 255, 0.76);
   box-shadow: var(--shadow-dropdown);
 }
@@ -1064,6 +1074,8 @@ a {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .dsker_active-session__messages {
@@ -1084,7 +1096,7 @@ a {
 
 .dsker_message {
   padding: 14px 16px;
-  border-radius: 0;
+  border-radius: 12px;
   max-width: 80%;
 }
 
@@ -1097,6 +1109,7 @@ a {
   background: rgba(255, 255, 255, 0.72);
   border: 1px solid var(--color-border);
   margin-right: auto;
+  max-width: 100%;
 }
 
 .dsker_tool-card {
@@ -1125,7 +1138,7 @@ a {
 .dsker_tool-card {
   padding: 14px 16px;
   border: 1px dashed var(--color-border);
-  border-radius: 0;
+  border-radius: 12px;
   background: rgba(255, 255, 255, 0.58);
 }
 
@@ -1147,7 +1160,7 @@ a {
 
 .dsker_stat-card {
   border: 1px solid var(--color-border);
-  border-radius: 0;
+  border-radius: 12px;
   background: rgba(255, 255, 255, 0.72);
 }
 
@@ -1205,7 +1218,7 @@ a {
 }
 
 .dsker_settings-card__panel {
-  border-radius: 0;
+  border-radius: 12px;
   background: rgba(255, 255, 255, 0.72);
 }
 
@@ -1264,7 +1277,7 @@ a {
 
 .ant-modal .ant-modal-content {
   border: 1px solid var(--color-border);
-  border-radius: 0;
+  border-radius: 12px;
   box-shadow: 0 24px 60px rgba(50, 27, 18, 0.18);
 }
 
