@@ -141,6 +141,7 @@ a {
   display: flex;
   align-items: center;
   gap: 10px;
+  pointer-events: none;
 }
 
 .dsker_sidebar-shell[data-state="closed"] .dsker_sidebar-brand {
