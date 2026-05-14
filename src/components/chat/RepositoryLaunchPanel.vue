@@ -31,7 +31,7 @@ const branchOptions = [
           size="large"
           :options="branchOptions"
           :default-value="'master'"
-          style="width:180px"
+          style="width:250px"
         />
       </div>
     </div>

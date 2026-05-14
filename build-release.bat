@@ -9,13 +9,21 @@ if %errorlevel% neq 0 (
     exit /b %errorlevel%
 )
 
-echo [DeepSeeker] Building release (exe only, skip msi bundling)...
-pnpm tauri build --bundles none
-if %errorlevel% neq 0 (
-    echo [DeepSeeker] Build failed.
-    exit /b %errorlevel%
-)
+echo [DeepSeeker] Compiling frontend and Rust backend...
+pnpm tauri build 2>&1
 
-echo [DeepSeeker] Done! Release exe at:
+echo.
+echo ================================================================
+echo If MSI bundling failed due to WiX download timeout, the exe
+echo is already compiled and ready to use at:
+echo.
 echo     src-tauri\target\release\deepseeker.exe
+echo.
+echo To create an MSI installer manually:
+echo   1. Download WiX Toolset v3.14 from:
+echo      https://github.com/wixtoolset/wix3/releases/tag/wix3141rtm
+echo   2. Extract wix314-binaries.zip to:
+echo      %%USERPROFILE%%\.tauri\wix\
+echo   3. Re-run this script
+echo ================================================================
 pause

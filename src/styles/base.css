@@ -366,6 +366,9 @@ a {
   background: transparent;
   cursor: pointer;
   text-align: left;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
   transition:
     background-color 180ms ease,
     color 180ms ease;
@@ -999,11 +1002,13 @@ a {
   gap: 8px;
 }
 
-.dsker_repository-panel__field label {
-  color: var(--color-text-tertiary);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
+.dsker_repository-panel__field label,
+.dsker_repository-panel .ant-select-selection-item,
+.dsker_repository-panel .ant-select-selection-placeholder {
+  color: var(--color-text-primary);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
 }
 
 .dsker_content-page {
