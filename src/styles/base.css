@@ -581,6 +581,65 @@ a {
   font-size: 10px;
 }
 
+/* Context menu */
+.dsker_context-menu-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+}
+
+.dsker_context-menu {
+  position: fixed;
+  z-index: 1000;
+  min-width: 140px;
+  padding: 6px;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.dsker_context-menu__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  transition: background-color 150ms;
+}
+
+.dsker_context-menu__item:hover {
+  background: var(--color-surface-hover);
+}
+
+.dsker_context-menu__item--danger {
+  color: #dc2626;
+}
+
+.dsker_context-menu__item--danger:hover {
+  background: rgba(220, 38, 38, 0.08);
+}
+
+.dsker_context-menu__icon {
+  font-size: 14px;
+  width: 18px;
+  text-align: center;
+}
+
+.dsker_context-menu__divider {
+  height: 1px;
+  margin: 4px 8px;
+  background: var(--color-border);
+}
+
+.dsker_session-rename-input {
+  flex: 1;
+  min-width: 0;
+}
+
 .dsker_sidebar-footer {
   padding: 12px;
   border-top: 1px solid var(--color-border);

@@ -218,6 +218,16 @@ export const useSessionStore = defineStore("sessions", () => {
     persist();
   }
 
+  function renameSession(sessionId: string, newTitle: string) {
+    const trimmed = newTitle.trim();
+    if (!trimmed) return;
+    sessions.value = sessions.value.map((session) =>
+      session.id === sessionId ? { ...session, title: trimmed } : session,
+    );
+    useTabStore().updateSessionTabTitle(sessionId, trimmed);
+    persist();
+  }
+
   function deleteSession(sessionId: string) {
     sessions.value = sessions.value.filter((session) => session.id !== sessionId);
     if (activeSessionId.value === sessionId) {
@@ -239,6 +249,7 @@ export const useSessionStore = defineStore("sessions", () => {
     createEmptySession,
     createSession,
     deleteSession,
+    renameSession,
     filteredSessions,
     searchQuery,
     sendMessage,
