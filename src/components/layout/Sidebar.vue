@@ -44,6 +44,8 @@ const uiStore = useUiStore();
             title="GitHub"
             aria-label="GitHub"
             data-no-drag
+            href="https://github.com/RGAA-Software/deepseeker"
+            target="_blank"
           >
             <template #icon>
               <GithubOutlined />
