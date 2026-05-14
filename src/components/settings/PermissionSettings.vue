@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useSettingsStore } from "../../stores/Settings";
-import type { PermissionMode } from "../../mocks/Settings";
+import type { PermissionMode } from "../../stores/Settings";
 
 const store = useSettingsStore();
 

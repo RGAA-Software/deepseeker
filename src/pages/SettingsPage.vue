@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { useSettingsStore } from "../stores/Settings";
-import { aboutTab } from "../mocks/Settings";
+import { aboutTab } from "../stores/Settings";
 import ProviderSettings from "../components/settings/ProviderSettings.vue";
 import PermissionSettings from "../components/settings/PermissionSettings.vue";
 import GeneralSettings from "../components/settings/GeneralSettings.vue";

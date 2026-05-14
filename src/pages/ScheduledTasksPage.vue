@@ -4,7 +4,7 @@ import ContentPageHeader from "../components/shared/ContentPageHeader.vue";
 import ScheduledStatsGrid from "../components/scheduled/ScheduledStatsGrid.vue";
 import ScheduledTasksTable from "../components/scheduled/ScheduledTasksTable.vue";
 import { useScheduledTasksStore } from "../stores/ScheduledTasks";
-import type { ScheduledTaskFrequency } from "../mocks/Scheduled";
+import type { ScheduledTaskFrequency } from "../stores/ScheduledTasks";
 
 const scheduledStore = useScheduledTasksStore();
 const showCreateTaskModal = ref(false);

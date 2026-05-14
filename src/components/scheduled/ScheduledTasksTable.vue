@@ -3,7 +3,7 @@ import { computed } from "vue";
 import {
   scheduledFrequencyLabels,
   type ScheduledTaskItem,
-} from "../../mocks/Scheduled";
+} from "../../stores/ScheduledTasks";
 
 const props = defineProps<{
   tasks: ScheduledTaskItem[];

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { SessionItem } from "../../mocks/Sessions";
+import type { SessionItem } from "../../stores/Sessions";
 import { useSessionStore } from "../../stores/Sessions";
 import { useTabStore } from "../../stores/Tabs";
 

@@ -1,16 +1,30 @@
 import { defineStore } from "pinia";
 import { computed, ref } from "vue";
 import {
-  mockScheduledTasks,
-  scheduledFrequencyLabels,
-  type ScheduledTaskFrequency,
-  type ScheduledTaskItem,
-  type ScheduledTaskStatus,
-} from "../mocks/Scheduled";
-import {
   readVersionedLocalState,
   writeVersionedLocalState,
 } from "../utils/LocalState";
+
+export type ScheduledTaskFrequency = "hourly" | "daily" | "weekly" | "monthly";
+
+export type ScheduledTaskStatus = "Success" | "Queued" | "Failed";
+
+export type ScheduledTaskItem = {
+  id: string;
+  name: string;
+  frequency: ScheduledTaskFrequency;
+  status: ScheduledTaskStatus;
+  nextRunLabel: string;
+  nextRunAt: number;
+  enabled: boolean;
+};
+
+export const scheduledFrequencyLabels: Record<ScheduledTaskFrequency, string> = {
+  hourly: "每小时",
+  daily: "每天",
+  weekly: "每周",
+  monthly: "每月",
+};
 
 const SCHEDULED_STORAGE_KEY = "deepseeker.scheduled";
 const SCHEDULED_STORAGE_VERSION = 1;
@@ -52,7 +66,7 @@ export const useScheduledTasksStore = defineStore("scheduledTasks", () => {
   const stored = readVersionedLocalState<ScheduledTasksState>(
     SCHEDULED_STORAGE_KEY,
     SCHEDULED_STORAGE_VERSION,
-    { tasks: mockScheduledTasks },
+    { tasks: [] },
   );
   const tasks = ref<ScheduledTaskItem[]>(stored.tasks);
 

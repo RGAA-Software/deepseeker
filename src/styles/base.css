@@ -1060,8 +1060,20 @@ a {
   background: transparent;
 }
 
+.dsker_active-session__body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.dsker_active-session__messages {
+  flex: 1;
+  min-height: 0;
+}
+
 .dsker_active-session__composer {
-  margin-top: 18px;
+  padding-top: 18px;
+  flex-shrink: 0;
 }
 
 .dsker_message + .dsker_message,
@@ -1073,15 +1085,22 @@ a {
 .dsker_message {
   padding: 14px 16px;
   border-radius: 0;
+  max-width: 80%;
 }
 
 .dsker_message--user {
   background: var(--color-surface-container);
+  margin-left: auto;
 }
 
 .dsker_message--assistant {
   background: rgba(255, 255, 255, 0.72);
   border: 1px solid var(--color-border);
+  margin-right: auto;
+}
+
+.dsker_tool-card {
+  max-width: 80%;
 }
 
 .dsker_message__label,

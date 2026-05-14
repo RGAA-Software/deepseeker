@@ -10,13 +10,17 @@ const sessionStore = useSessionStore();
 <template>
   <section class="dsker_content-page">
     <template v-if="sessionStore.activeSession && sessionStore.activeSession.messages.length > 0">
-      <SessionMessageList :messages="sessionStore.activeSession.messages" />
+      <div class="dsker_active-session__body">
+        <div class="dsker_active-session__messages">
+          <SessionMessageList :messages="sessionStore.activeSession.messages" />
+        </div>
 
-      <div class="dsker_active-session__composer">
-        <EmptyComposer
-          mode="session"
-          :session-id="sessionStore.activeSessionId!"
-        />
+        <div class="dsker_active-session__composer">
+          <EmptyComposer
+            mode="session"
+            :session-id="sessionStore.activeSessionId!"
+          />
+        </div>
       </div>
     </template>
 

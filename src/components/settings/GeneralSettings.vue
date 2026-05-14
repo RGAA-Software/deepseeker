@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useSettingsStore } from "../../stores/Settings";
-import type { EffortLevel, ThemeMode } from "../../mocks/Settings";
+import type { EffortLevel, ThemeMode } from "../../stores/Settings";
 
 const store = useSettingsStore();
 

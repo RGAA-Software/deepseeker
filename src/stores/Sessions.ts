@@ -1,7 +1,6 @@
 import { defineStore } from "pinia";
 import { computed, ref } from "vue";
 import type { TimeGroupKey } from "../constants/TimeGroups";
-import { mockSessions, type SessionItem } from "../mocks/Sessions";
 import { useTabStore } from "./Tabs";
 import {
   readVersionedLocalState,
@@ -15,7 +14,20 @@ export type ChatMessage = {
   label?: string;
 };
 
+export type SessionItem = {
+  id: string;
+  title: string;
+  group: TimeGroupKey;
+  relative: string;
+  active?: boolean;
+};
+
 export type SessionRecord = SessionItem & {
+  id: string;
+  title: string;
+  group: TimeGroupKey;
+  relative: string;
+  active: boolean;
   messages: ChatMessage[];
   status: "idle" | "running";
 };
@@ -36,40 +48,15 @@ type SessionsState = {
   searchQuery: string;
   sessions: SessionRecord[];
 };
-const defaultSessions: SessionRecord[] = mockSessions.map((session) => ({
-  ...session,
-  status: session.active ? "running" : "idle",
-  messages: session.active
-    ? [
-        {
-          id: `${session.id}-m1`,
-          role: "user",
-          content: "我想重构登录流程，把 JWT 签名逻辑拆出去，并补上 payload 校验。",
-        },
-        {
-          id: `${session.id}-m2`,
-          role: "assistant",
-          content:
-            "已收到。我会先分析当前实现，再拆分 token helper，并补齐输入验证层。",
-        },
-        {
-          id: `${session.id}-m3`,
-          role: "tool",
-          label: "edit_file",
-          content: "更新 `src/lib/auth.ts`，抽离 `signToken()` 并增加 payload 校验。",
-        },
-      ]
-    : [],
-}));
 
 export const useSessionStore = defineStore("sessions", () => {
   const stored = readVersionedLocalState<SessionsState>(
     SESSIONS_STORAGE_KEY,
     SESSIONS_STORAGE_VERSION,
     {
-    activeSessionId: defaultSessions.find((session) => session.active)?.id ?? null,
+    activeSessionId: null,
     searchQuery: "",
-    sessions: defaultSessions,
+    sessions: [],
     },
   );
   const searchQuery = ref(stored.searchQuery);

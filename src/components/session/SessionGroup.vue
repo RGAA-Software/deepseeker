@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { SessionItem } from "../../mocks/Sessions";
+import type { SessionItem } from "../../stores/Sessions";
 import SessionRow from "./SessionRow.vue";
 
 defineProps<{
