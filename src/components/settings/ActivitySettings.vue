@@ -26,15 +26,15 @@ const activities = ref<ActivityItem[]>([
     </div>
 
     <div style="display:flex; gap:16px; margin-bottom:20px;">
-      <a-card size="small" :bordered="true" style="flex:1; border-radius:12px;">
+      <a-card size="small" :bordered="true" style="flex:1; border-radius:0;">
         <div style="font-size:12px; color:var(--color-text-tertiary); margin-bottom:4px;">总令牌数</div>
         <div style="font-size:22px; font-weight:700;">452,310</div>
       </a-card>
-      <a-card size="small" :bordered="true" style="flex:1; border-radius:12px;">
+      <a-card size="small" :bordered="true" style="flex:1; border-radius:0;">
         <div style="font-size:12px; color:var(--color-text-tertiary); margin-bottom:4px;">请求数</div>
         <div style="font-size:22px; font-weight:700;">141</div>
       </a-card>
-      <a-card size="small" :bordered="true" style="flex:1; border-radius:12px;">
+      <a-card size="small" :bordered="true" style="flex:1; border-radius:0;">
         <div style="font-size:12px; color:var(--color-text-tertiary); margin-bottom:4px;">估算费用</div>
         <div style="font-size:22px; font-weight:700;">$1.13</div>
       </a-card>

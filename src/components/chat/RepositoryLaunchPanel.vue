@@ -18,22 +18,20 @@ const branchOptions = [
       <div class="dsker_repository-panel__field">
         <label>项目</label>
         <a-select
-          class="dsker_repository-select"
           size="large"
-          :bordered="false"
           :options="projectOptions"
           :default-value="'workspace'"
+          style="width:100%"
         />
       </div>
 
       <div class="dsker_repository-panel__field">
         <label>分支</label>
         <a-select
-          class="dsker_repository-select"
           size="large"
-          :bordered="false"
           :options="branchOptions"
           :default-value="'master'"
+          style="width:100%"
         />
       </div>
     </div>

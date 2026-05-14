@@ -2,6 +2,33 @@
   box-sizing: border-box;
 }
 
+/* Force all Ant Design components to use sharp corners */
+.ant-btn:not(.ant-btn-circle):not(.ant-btn-circle-outline),
+.ant-input,
+.ant-input-affix-wrapper,
+.ant-select-selector,
+.ant-card,
+.ant-card-bordered,
+.ant-modal-content,
+.ant-modal-header,
+.ant-table-container,
+.ant-tag,
+.ant-menu-item,
+.ant-checkbox-inner,
+.ant-radio-inner,
+.ant-switch,
+.ant-slider-track,
+.ant-slider-step,
+.ant-form-item,
+.ant-input-number,
+.ant-input-number-group-addon,
+.ant-picker,
+.ant-dropdown-menu,
+.ant-popconfirm,
+.ant-notification-notice {
+  border-radius: 0 !important;
+}
+
 html,
 body,
 #app {
@@ -82,7 +109,7 @@ a {
   flex-direction: column;
   border-right: 1px solid var(--color-border);
   background:
-    radial-gradient(circle at top left, rgba(143, 72, 47, 0.045), transparent 34%),
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.03), transparent 34%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0)),
     var(--color-surface-sidebar);
 }
@@ -254,6 +281,11 @@ a {
   box-shadow: none;
 }
 
+.dsker_window-controls__button {
+  width: 24px;
+  height: 24px;
+}
+
 .dsker_icon-button:hover,
 .dsker_sidebar-link:hover,
 .dsker_sidebar-toggle-button:hover,
@@ -308,7 +340,6 @@ a {
   min-height: 42px;
   padding: 0 12px;
   border: 0;
-  border-radius: 12px;
   color: var(--color-text-secondary);
   background: transparent;
   cursor: pointer;
@@ -380,7 +411,7 @@ a {
   height: 36px;
   display: flex;
   align-items: center;
-  border-radius: 14px;
+  border-radius: 0;
   border: 1px solid var(--color-sidebar-search-border);
   background: var(--color-sidebar-search-bg);
   padding: 0 12px 0 6px;
@@ -390,7 +421,7 @@ a {
   width: 1px;
   height: 16px;
   margin: 0 8px;
-  background: rgba(218, 193, 186, 0.8);
+  background: var(--color-border);
 }
 
 .dsker_search-icon {
@@ -464,7 +495,6 @@ a {
   margin-bottom: 6px;
   padding: 10px 12px;
   border: 1px solid transparent;
-  border-radius: 12px;
   text-align: left;
   background: transparent;
   color: var(--color-text-secondary);
@@ -487,7 +517,7 @@ a {
   color: var(--color-text-primary);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.72),
-    0 3px 10px rgba(143, 72, 47, 0.07);
+    0 3px 10px rgba(37, 99, 235, 0.07);
 }
 
 .dsker_session-row__status {
@@ -608,7 +638,7 @@ a {
   padding: 0 12px;
   min-height: var(--tabbar-height);
   border: 0;
-  border-right: 1px solid rgba(218, 193, 186, 0.6);
+  border-right: 1px solid var(--color-border);
   background: transparent;
   color: var(--color-text-secondary);
   cursor: pointer;
@@ -681,7 +711,7 @@ a {
 .dsker_tabbar__tools {
   gap: 4px;
   padding: 0 8px;
-  border-left: 1px solid rgba(218, 193, 186, 0.7);
+  border-left: 1px solid var(--color-border);
 }
 
 .dsker_toolbar-button {
@@ -695,7 +725,7 @@ a {
 
 .dsker_window-controls {
   display: flex;
-  align-items: stretch;
+  align-items: center;
   gap: 6px;
   padding: 0 8px 0 4px;
   flex-shrink: 0;
@@ -719,7 +749,7 @@ a {
   height: 100%;
   min-height: 0;
   background:
-    radial-gradient(circle at top left, rgba(143, 72, 47, 0.045), transparent 34%),
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.03), transparent 34%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0)),
     var(--color-surface);
 }
@@ -804,8 +834,8 @@ a {
   flex-direction: column;
   gap: 12px;
   padding: 16px;
-  border-radius: 16px 16px 0 0;
-  border: 1px solid rgba(218, 193, 186, 0.22);
+  border-radius: 0;
+  border: 1px solid var(--color-border);
   background: rgba(255, 255, 255, 0.84);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -834,7 +864,7 @@ a {
   justify-content: space-between;
   gap: 16px;
   padding-top: 12px;
-  border-top: 1px solid rgba(218, 193, 186, 0.7);
+  border-top: 1px solid var(--color-border);
 }
 
 .dsker_composer-footer__left,
@@ -847,10 +877,8 @@ a {
 }
 
 .dsker_pill-button,
-.dsker_context-chip,
-.dsker_repository-select {
+.dsker_context-chip {
   min-height: 34px;
-  border-radius: 12px;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -859,22 +887,19 @@ a {
   font-weight: 500;
 }
 
-.dsker_pill-button,
-.dsker_repository-select {
-  border: 1px solid rgba(218, 193, 186, 0.88);
+.dsker_pill-button {
+  border: 1px solid var(--color-border);
   background: rgba(255, 255, 255, 0.9);
   color: var(--color-text-secondary);
   cursor: pointer;
 }
 
-.dsker_pill-button:hover,
-.dsker_repository-select:hover {
+.dsker_pill-button:hover {
   background: var(--color-surface-hover);
   color: var(--color-text-primary);
 }
 
-.dsker_pill-button svg,
-.dsker_repository-select svg {
+.dsker_pill-button svg {
   width: 14px;
   height: 14px;
 }
@@ -890,7 +915,6 @@ a {
   min-height: 34px;
   padding: 0 14px;
   border: 0;
-  border-radius: 12px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -931,9 +955,9 @@ a {
 
 .dsker_repository-panel {
   padding: 12px 16px 16px;
-  border: 1px solid rgba(218, 193, 186, 0.22);
+  border: 1px solid var(--color-border);
   border-top: 0;
-  border-radius: 0 0 16px 16px;
+  border-radius: 0;
   background: rgba(255, 255, 255, 0.72);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -960,30 +984,13 @@ a {
   letter-spacing: 0.04em;
 }
 
-.dsker_repository-select {
-  width: 100%;
-  justify-content: space-between;
-}
-
-.dsker_repository-select .ant-select-selector {
-  min-height: 40px !important;
-  border: 0 !important;
-  background: transparent !important;
-  box-shadow: none !important;
-}
-
-.dsker_repository-select .ant-select-selection-item,
-.dsker_repository-select .ant-select-selection-placeholder {
-  line-height: 40px !important;
-}
-
 .dsker_content-page {
   min-height: 0;
   height: 100%;
   overflow: auto;
   padding: 28px 28px 32px;
   background:
-    radial-gradient(circle at top left, rgba(143, 72, 47, 0.045), transparent 34%),
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.03), transparent 34%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0)),
     var(--color-surface);
 }
@@ -1027,8 +1034,8 @@ a {
 
 .dsker_content-page__panel {
   padding: 18px;
-  border: 1px solid rgba(218, 193, 186, 0.8);
-  border-radius: 18px;
+  border: 1px solid var(--color-border);
+  border-radius: 0;
   background: rgba(255, 255, 255, 0.76);
   box-shadow: var(--shadow-dropdown);
 }
@@ -1053,7 +1060,7 @@ a {
 
 .dsker_message {
   padding: 14px 16px;
-  border-radius: 16px;
+  border-radius: 0;
 }
 
 .dsker_message--user {
@@ -1062,7 +1069,7 @@ a {
 
 .dsker_message--assistant {
   background: rgba(255, 255, 255, 0.72);
-  border: 1px solid rgba(218, 193, 186, 0.65);
+  border: 1px solid var(--color-border);
 }
 
 .dsker_message__label,
@@ -1086,8 +1093,8 @@ a {
 
 .dsker_tool-card {
   padding: 14px 16px;
-  border: 1px dashed rgba(143, 72, 47, 0.28);
-  border-radius: 16px;
+  border: 1px dashed var(--color-border);
+  border-radius: 0;
   background: rgba(255, 255, 255, 0.58);
 }
 
@@ -1108,8 +1115,8 @@ a {
 }
 
 .dsker_stat-card {
-  border: 1px solid rgba(218, 193, 186, 0.8);
-  border-radius: 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 0;
   background: rgba(255, 255, 255, 0.72);
 }
 
@@ -1144,14 +1151,13 @@ a {
 
 .dsker_settings-nav__menu.ant-menu {
   border: 0;
-  border-radius: 18px;
+  border-radius: 0;
   background: rgba(255, 255, 255, 0.76);
   box-shadow: var(--shadow-dropdown);
 }
 
 .dsker_settings-nav__menu.ant-menu .ant-menu-item {
   margin: 6px;
-  border-radius: 12px;
 }
 
 .dsker_settings-nav__menu.ant-menu .ant-menu-item-selected {
@@ -1168,7 +1174,7 @@ a {
 }
 
 .dsker_settings-card__panel {
-  border-radius: 16px;
+  border-radius: 0;
   background: rgba(255, 255, 255, 0.72);
 }
 
@@ -1222,12 +1228,12 @@ a {
 
 .ant-modal .ant-modal-content,
 .ant-modal .ant-modal-header {
-  background: rgba(255, 250, 247, 0.98);
+  background: var(--color-surface);
 }
 
 .ant-modal .ant-modal-content {
-  border: 1px solid rgba(218, 193, 186, 0.88);
-  border-radius: 20px;
+  border: 1px solid var(--color-border);
+  border-radius: 0;
   box-shadow: 0 24px 60px rgba(50, 27, 18, 0.18);
 }
 
@@ -1246,7 +1252,7 @@ a {
 
 .dsker_tasks-table .ant-table-tbody > tr > td,
 .dsker_tasks-table .ant-table-thead > tr > th {
-  border-bottom-color: rgba(218, 193, 186, 0.45);
+  border-bottom-color: var(--color-border);
 }
 
 .dsker_tasks-table .ant-table-tbody > tr:hover > td {

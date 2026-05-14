@@ -64,7 +64,7 @@ const store = useSettingsStore();
 }
 .dsker_provider-card {
   margin-bottom: 8px;
-  border-radius: 12px;
+  border-radius: 0;
 }
 .dsker_provider-card--active {
   border-color: var(--color-primary);

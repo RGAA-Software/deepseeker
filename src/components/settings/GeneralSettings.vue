@@ -139,7 +139,7 @@ const EFFORTS: { value: EffortLevel; label: string }[] = [
   color: var(--color-text-tertiary);
 }
 .dsker_toggle-card {
-  border-radius: 12px;
+  border-radius: 0;
 }
 .dsker_toggle-hint {
   margin-top: 8px;

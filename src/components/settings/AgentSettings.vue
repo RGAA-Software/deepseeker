@@ -18,7 +18,7 @@ const SOURCE_LABEL: Record<string, string> = {
     </div>
 
     <div v-for="agent in store.agents" :key="agent.id">
-      <a-card size="small" :bordered="true" hoverable style="border-radius:12px; margin-bottom:8px;">
+      <a-card size="small" :bordered="true" hoverable style="border-radius:0; margin-bottom:8px;">
         <div style="display:flex; align-items:center; gap:12px;">
           <a-badge :color="agent.color" />
           <div style="flex:1; min-width:0;">

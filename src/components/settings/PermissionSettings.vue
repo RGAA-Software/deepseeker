@@ -48,7 +48,7 @@ const MODES: { mode: PermissionMode; label: string; desc: string }[] = [
 .dsker_section-title { margin: 0 0 4px; font-size: 15px; font-weight: 600; }
 .dsker_section-desc { margin: 0; font-size: 13px; color: var(--color-text-tertiary); }
 .dsker_permission-list { display: flex; flex-direction: column; gap: 8px; }
-.dsker_permission-card { border-radius: 12px; cursor: pointer; }
+.dsker_permission-card { border-radius: 0; cursor: pointer; }
 .dsker_permission-card--active {
   border-color: var(--color-primary);
   box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.16);

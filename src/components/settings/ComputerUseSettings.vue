@@ -14,7 +14,7 @@ const actionDelayMs = ref(500);
       <p class="dsker_section-desc">允许 AI 代理控制您的计算机屏幕和输入设备。</p>
     </div>
 
-    <a-card size="small" :bordered="true" style="border-radius:12px; margin-bottom:12px;">
+    <a-card size="small" :bordered="true" style="border-radius:0; margin-bottom:12px;">
       <div style="display:flex; align-items:center; gap:12px; margin-bottom:8px;">
         <a-switch v-model:checked="enabled" />
         <div>
@@ -25,7 +25,7 @@ const actionDelayMs = ref(500);
     </a-card>
 
     <template v-if="enabled">
-      <a-card size="small" :bordered="true" style="border-radius:12px;">
+      <a-card size="small" :bordered="true" style="border-radius:0;">
         <a-form layout="vertical" style="max-width:400px;">
           <a-form-item label="截图质量">
             <a-slider v-model:value="screenshotQuality" :min="10" :max="100" />

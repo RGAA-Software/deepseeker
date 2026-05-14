@@ -37,7 +37,7 @@ function toggleServer(id: string) {
       :key="server.id"
       size="small"
       :bordered="true"
-      style="border-radius:12px; margin-bottom:8px;"
+      style="border-radius:0; margin-bottom:8px;"
     >
       <div style="display:flex; align-items:center; gap:12px;">
         <div style="flex:1; min-width:0;">

@@ -46,6 +46,6 @@ const store = useSettingsStore();
 .dsker_section-header { margin-bottom: 16px; }
 .dsker_section-title { margin: 0 0 4px; font-size: 15px; font-weight: 600; }
 .dsker_section-desc { margin: 0; font-size: 13px; color: var(--color-text-tertiary); }
-.dsker_h5-card { border-radius: 12px; }
+.dsker_h5-card { border-radius: 0; }
 .dsker_h5-toggle-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
 </style>

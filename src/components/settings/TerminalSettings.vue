@@ -15,7 +15,7 @@ const shellPath = ref("");
       <p class="dsker_section-desc">配置集成终端的显示和行为。</p>
     </div>
 
-    <a-card size="small" :bordered="true" style="border-radius:12px;">
+    <a-card size="small" :bordered="true" style="border-radius:0;">
       <a-form layout="vertical" style="max-width:400px;">
         <a-form-item label="字号">
           <a-input-number v-model:value="fontSize" :min="10" :max="24" style="width:100%;" />

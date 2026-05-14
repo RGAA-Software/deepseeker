@@ -13,7 +13,7 @@
     </div>
 
     <!-- GitHub -->
-    <a-card size="small" :bordered="true" hoverable style="width:100%; border-radius:12px; margin-bottom:12px;">
+    <a-card size="small" :bordered="true" hoverable style="width:100%; border-radius:0; margin-bottom:12px;">
       <a
         href="https://github.com/RGAA-Software/deepseeker"
         target="_blank"
@@ -28,7 +28,7 @@
     </a-card>
 
     <!-- Updates -->
-    <a-card size="small" :bordered="true" style="width:100%; border-radius:12px;">
+    <a-card size="small" :bordered="true" style="width:100%; border-radius:0;">
       <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:12px;">
         <div>
           <div style="font-size:14px; font-weight:500;">更新</div>
