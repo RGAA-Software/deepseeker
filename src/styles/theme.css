@@ -1,0 +1,53 @@
+@font-face {
+  font-family: "Facon";
+  src: url("../assets/fonts/Facon-2.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light;
+  font-family: Inter, "Segoe UI", "Microsoft YaHei UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --sidebar-width: 280px;
+  --sidebar-rail-width: 72px;
+  --tabbar-height: 37px;
+  --font-brand: "Facon", Inter, "Segoe UI", sans-serif;
+  --color-primary: #2563eb;
+  --color-primary-container: #60a5fa;
+  --color-on-primary: #ffffff;
+  --color-on-surface: #1b1e2a;
+  --color-on-surface-variant: #4a4f5b;
+  --color-surface: #f5f8fc;
+  --color-surface-bright: #f5f8fc;
+  --color-surface-container: #e8eef7;
+  --color-surface-container-low: #edf2f9;
+  --color-surface-container-high: #dce5f2;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-sidebar: #edf2f9;
+  --color-surface-hover: #dce5f2;
+  --color-surface-selected: #e8eef7;
+  --color-background: #f5f8fc;
+  --color-outline: #7a8395;
+  --color-outline-variant: #c4cdd8;
+  --color-border: #c4cdd8;
+  --color-border-focus: #8b98a8;
+  --color-border-separator: #c4cdd8;
+  --color-text-primary: #1b1e2a;
+  --color-text-secondary: #4a4f5b;
+  --color-text-tertiary: #7a8395;
+  --color-brand: #2563eb;
+  --color-window-close-hover: #e81123;
+  --color-sidebar-search-bg: rgba(255, 255, 255, 0.78);
+  --color-sidebar-search-border: rgba(196, 205, 216, 0.88);
+  --color-sidebar-item-hover: rgba(220, 229, 242, 0.82);
+  --color-sidebar-item-active: rgba(232, 238, 247, 0.94);
+  --color-sidebar-item-active-border: rgba(37, 99, 235, 0.12);
+  --gradient-btn-primary: linear-gradient(135deg, #2563eb, #60a5fa);
+  --shadow-dropdown: 0 2px 8px rgba(27, 30, 42, 0.04), 0 4px 16px rgba(27, 30, 42, 0.06);
+  --shadow-button-primary: 0 8px 24px rgba(37, 99, 235, 0.18);
+}
