@@ -75,8 +75,8 @@ a {
 }
 
 ::selection {
-  background: rgba(255, 219, 208, 0.9);
-  color: #390c00;
+  background: rgba(37, 99, 235, 0.18);
+  color: var(--color-text-primary);
 }
 
 .dsker_app-shell-viewport {
@@ -267,7 +267,6 @@ a {
 .dsker_sidebar-link,
 .dsker_sidebar-toggle-button,
 .dsker_manage-button,
-.dsker_project-filter-button,
 .dsker_composer-icon-button,
 .dsker_toolbar-button,
 .dsker_window-controls__button {
@@ -290,12 +289,26 @@ a {
 .dsker_sidebar-link:hover,
 .dsker_sidebar-toggle-button:hover,
 .dsker_manage-button:hover,
-.dsker_project-filter-button:hover,
 .dsker_composer-icon-button:hover,
 .dsker_toolbar-button:hover,
 .dsker_window-controls__button:hover {
   color: var(--color-text-primary);
   background: color-mix(in srgb, var(--color-surface-hover) 72%, transparent);
+}
+
+.dsker_project-filter-button,
+.dsker_project-filter-button.ant-btn {
+  width: auto !important;
+  height: auto !important;
+  min-width: 0;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+.dsker_project-filter-button:hover,
+.dsker_project-filter-button.ant-btn:hover {
+  color: var(--color-text-primary) !important;
+  background: transparent !important;
 }
 
 .dsker_icon-button .anticon,
@@ -400,21 +413,16 @@ a {
   margin: 0;
 }
 
-.dsker_sidebar-tools {
-  padding: 0 12px 8px;
-  gap: 6px;
-}
-
 .dsker_sidebar-search {
   min-width: 0;
-  flex: 1;
+  margin: 0 12px 8px;
   height: 36px;
   display: flex;
   align-items: center;
   border-radius: 0;
   border: 1px solid var(--color-sidebar-search-border);
   background: var(--color-sidebar-search-bg);
-  padding: 0 12px 0 6px;
+  padding: 0 8px;
 }
 
 .dsker_sidebar-divider {
@@ -438,14 +446,14 @@ a {
   background: transparent;
   color: var(--color-text-primary);
   font-size: 13px;
-  padding-left: 8px;
+  padding-left: 6px;
   outline: none;
 }
 
 .dsker_sidebar-search__input.ant-input {
-  padding: 0;
   background: transparent;
   box-shadow: none;
+  padding-left: 6px;
 }
 
 .dsker_sidebar-search__input::placeholder,

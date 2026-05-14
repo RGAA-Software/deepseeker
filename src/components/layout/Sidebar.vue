@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import {
-  DeleteOutlined,
   FilterOutlined,
   GithubOutlined,
   LeftOutlined,
@@ -98,29 +97,21 @@ const uiStore = useUiStore();
       </div>
 
       <template v-if="uiStore.sidebarOpen">
-        <div class="dsker_sidebar-tools">
-          <div class="dsker_sidebar-search">
-            <a-button class="dsker_project-filter-button" type="text" aria-label="项目筛选">
-              <template #icon>
-                <FilterOutlined />
-              </template>
-            </a-button>
-            <span class="dsker_sidebar-divider" aria-hidden="true" />
-            <SearchOutlined class="dsker_search-icon" />
-            <a-input
-              :value="sessionStore.searchQuery"
-              class="dsker_sidebar-search__input"
-              :bordered="false"
-              placeholder="搜索会话..."
-              @update:value="sessionStore.setSearchQuery"
-            />
-          </div>
-
-          <a-button class="dsker_manage-button" type="text" aria-label="批量管理">
+        <div class="dsker_sidebar-search">
+          <a-button class="dsker_project-filter-button" type="text" aria-label="项目筛选">
             <template #icon>
-              <DeleteOutlined />
+              <FilterOutlined />
             </template>
           </a-button>
+          <span class="dsker_sidebar-divider" aria-hidden="true" />
+          <SearchOutlined class="dsker_search-icon" />
+          <a-input
+            :value="sessionStore.searchQuery"
+            class="dsker_sidebar-search__input"
+            :bordered="false"
+            placeholder="搜索会话..."
+            @update:value="sessionStore.setSearchQuery"
+          />
         </div>
 
         <div class="dsker_session-list">
