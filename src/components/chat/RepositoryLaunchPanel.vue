@@ -21,7 +21,7 @@ const branchOptions = [
           size="large"
           :options="projectOptions"
           :default-value="'workspace'"
-          style="width:100%"
+          style="width:250px"
         />
       </div>
 
@@ -31,7 +31,7 @@ const branchOptions = [
           size="large"
           :options="branchOptions"
           :default-value="'master'"
-          style="width:100%"
+          style="width:180px"
         />
       </div>
     </div>
