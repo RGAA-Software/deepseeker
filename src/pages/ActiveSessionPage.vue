@@ -1,10 +1,14 @@
 <script setup lang="ts">
+import { ref } from "vue";
 import EmptyComposer from "../components/chat/EmptyComposer.vue";
 import RepositoryLaunchPanel from "../components/chat/RepositoryLaunchPanel.vue";
 import SessionMessageList from "../components/session/SessionMessageList.vue";
 import { useSessionStore } from "../stores/Sessions";
 
 const sessionStore = useSessionStore();
+
+const selectedProject = ref("workspace");
+const selectedBranch = ref("master");
 </script>
 
 <template>
@@ -20,6 +24,12 @@ const sessionStore = useSessionStore();
             mode="session"
             :session-id="sessionStore.activeSessionId!"
           />
+
+          <div class="dsker_repo-badge">
+            <span class="dsker_repo-badge__project">{{ selectedProject }}</span>
+            <span class="dsker_repo-badge__separator">|</span>
+            <span class="dsker_repo-badge__branch">{{ selectedBranch }}</span>
+          </div>
         </div>
       </div>
     </template>
@@ -43,7 +53,10 @@ const sessionStore = useSessionStore();
             mode="session"
             :session-id="sessionStore.activeSessionId!"
           />
-          <RepositoryLaunchPanel />
+          <RepositoryLaunchPanel
+            v-model:project="selectedProject"
+            v-model:branch="selectedBranch"
+          />
         </div>
       </div>
     </template>

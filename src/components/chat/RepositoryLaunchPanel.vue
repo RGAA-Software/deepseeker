@@ -10,6 +10,9 @@ const branchOptions = [
   { value: "feature/ui-shell", label: "feature/ui-shell" },
   { value: "refactor/stores", label: "refactor/stores" },
 ];
+
+const project = defineModel<string>("project", { default: "workspace" });
+const branch = defineModel<string>("branch", { default: "master" });
 </script>
 
 <template>
@@ -20,7 +23,7 @@ const branchOptions = [
         <a-select
           size="large"
           :options="projectOptions"
-          :default-value="'workspace'"
+          v-model:value="project"
           style="width:250px"
         />
       </div>
@@ -30,7 +33,7 @@ const branchOptions = [
         <a-select
           size="large"
           :options="branchOptions"
-          :default-value="'master'"
+          v-model:value="branch"
           style="width:250px"
         />
       </div>

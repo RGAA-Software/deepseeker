@@ -60,7 +60,7 @@ function handleKeydown(event: KeyboardEvent) {
       v-model:value="draft"
       class="dsker_composer-input"
       placeholder="随便问点什么..."
-      :auto-size="{ minRows: 2, maxRows: 6 }"
+      :auto-size="{ minRows: 1, maxRows: 12 }"
       :bordered="false"
       @keydown="handleKeydown"
     />
